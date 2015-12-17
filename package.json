@@ -9,7 +9,7 @@
     "url": "https://github.com/nnnick/Chart.js.git"
   },
   "license" : "MIT",
-  "dependences": {
+  "dependencies": {
       "loophole": "~1.1"
   },
   "devDependencies": {
