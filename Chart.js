@@ -15,6 +15,7 @@
 
 	//Declare root variable - window in the browser, global on the server
 	var root = this,
+		loophole = require('loophole'),
 		previous = root.Chart;
 
 	//Occupy the global variable of Chart, and create a simple base class
@@ -479,7 +480,7 @@
 
 				// Generate a reusable function that will serve as a template
 				// generator (and which will be cached).
-				new Function("obj",
+				new loophole.Function("obj",
 					"var p=[],print=function(){p.push.apply(p,arguments);};" +
 
 					// Introduce the data as local variables using with(){}
@@ -3079,7 +3080,7 @@
 			helpers.each(this.segments,function(segment){
 				segment.save();
 			});
-			
+
 			this.reflow();
 			this.render();
 		},
